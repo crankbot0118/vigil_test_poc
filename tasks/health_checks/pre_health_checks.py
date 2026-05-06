@@ -1,9 +1,10 @@
 import subprocess
 import os
+from tasks.utils import shell_run as sr
 
 commands=f"""
             hostname;date;pwd;
         """
 
-res=subprocess.run(commands, shell=True, capture_output=True, text=True)
-print(f"""Output: {res.stdout}""")
+runner = sr.shell_run(commands)
+print(runner.run_shell_cmd())

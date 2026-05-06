@@ -9,9 +9,9 @@ class Item(BaseModel):
 
 items={}
 
-# @app.get("/")
-# def first_example():
-#     return {"message": "Hello, FastAPI!"}
+@app.get("/")
+def first_example():
+    return {"message": "Hello, FastAPI!"}
 
 @app.post("/items")
 async def create_item(item: Item):

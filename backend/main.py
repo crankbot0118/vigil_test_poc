@@ -19,7 +19,7 @@ app.add_middleware(
 SSH_HOST = "54.80.214.20"
 SSH_PORT = 22
 SSH_USER = "ec2-user"
-SSH_KEY  = "/home/ec2-user/vigil_test_poc/key.pem"   # or use SSH_PASS
+SSH_KEY  = "/home/ec2-user/vigil_test_poc/key.ppk"   # or use SSH_PASS
 
 # Commands your pre-health check runs
 HEALTH_CHECK_COMMANDS = [

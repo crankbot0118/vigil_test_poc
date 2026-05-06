@@ -1,6 +1,6 @@
 import subprocess
 import os
-from tasks.utils import shell_run as sr
+from tasks.utils.shell_run import shell_run as sr
 
 commands=f"""
             hostname;date;pwd;

@@ -6,5 +6,4 @@ commands=f"""
             hostname;date;pwd;
         """
 
-runner = sr.shell_run(commands)
-print(runner.run_shell_cmd())
+print(sr.run_shell_cmd(commands))

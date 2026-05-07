@@ -1,6 +1,5 @@
 import subprocess
 import time
-import shlex
 
 class shell_run:
     def __init__(self, cmd):
@@ -8,6 +7,7 @@ class shell_run:
 
     def run_shell_cmd(self):
         try:
+            start_time=time.time()
             res = subprocess.run(
                 self.cmd,
                 shell=True,
@@ -17,7 +17,9 @@ class shell_run:
                 timeout=300,
                 check=True   #auto-raise if returncode != 0
             )
+            end_time=time.time()
+            print(f"Total Execution time: {end_time-start_time} secs...")
             return res.stdout.strip()
 
         except Exception as e:
-            raise RuntimeError(f"Command failed: {str(e)}") 
+            raise RuntimeError(f"Command failed: {str(e)}")

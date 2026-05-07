@@ -1,4 +1,4 @@
-import run_shell_cmd as sr
+from run_shell_cmd import shell_run as sr
 
 command=f"""
         hostname;date;pwd;
